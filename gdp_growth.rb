@@ -1,4 +1,6 @@
-=begin compare country gdp in a chosen year
+
+=begin 
+Compare GDP growth of different countries for a given year.
 =end
 require 'httparty'
 
@@ -7,10 +9,10 @@ year = ARGV[0]
 ARGV.clear
 
 puts "Enter the first country for comparison:"
-country_1 = gets.chomp
+country_1 = gets.chomp.capitalize
 
 puts "Enter the second country for the comparison:"
-country_2 = gets.chomp
+country_2 = gets.chomp.capitalize
 
 
 HEADERS = {"X-Api-Key" => "T+qnKw9NM0hAsoV8KVyn7Q==Kv2PQFZ4rGEaHMEx"}
@@ -34,7 +36,7 @@ if calculate_gdp_growth(year,country_1) < calculate_gdp_growth(year,country_2)
   biggest_country = country_2
 end
 
-puts "In the #{year} #{country_1.capitalize}'s GDP grew #{gdp_growth_country1}%, but #{country_2.capitalize}'s' GDP gew #{gdp_growth_country2}%.\n#{biggest_country.capitalize}'s' GDRP grew faster."
+puts "In the #{year} #{country_1}'s GDP grew #{gdp_growth_country1}%, but #{country_2}'s' GDP gew #{gdp_growth_country2}%.\n#{biggest_country.capitalize}'s' GDRP grew faster."
 
 
 
