@@ -34,12 +34,7 @@ if calculate_gdp_growth(year,country_1) < calculate_gdp_growth(year,country_2)
   biggest_country = country_2
 end
 
-puts "In #{year} #{country_1} GDP grew #{gdp_growth_country1} and #{country_2} GDP gew #{gdp_growth_country2}. \n #{biggest_country} grew faster"
-
-
-
-
-
+puts "In the #{year} #{country_1.capitalize}'s GDP grew #{gdp_growth_country1}%, but #{country_2.capitalize}'s' GDP gew #{gdp_growth_country2}%.\n#{biggest_country.capitalize}'s' GDRP grew faster."
 
 
 
